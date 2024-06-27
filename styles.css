@@ -1,0 +1,115 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+
+  --primary: #171717;
+  /* ex foreground DONE */
+  --primary-text: #fafafa;
+  --primary-hover: #262626;
+  --primary-focus: #404040;
+  --primary-active: #404040;
+
+  --secondary: #f5f5f5;
+  /* delete, use text instead DONE */
+  /* --secondary-foreground: #0a0a0a; */
+  --secondary-hover: #e5e5e5;
+  --secondary-focus: #d4d4d4;
+  --secondary-text: #6b6b6d;
+
+  --muted: #f5f5f5;
+  /* transform to text DONE */
+  --muted-text: #6b6b6d;
+
+  --ghost: #fafafa;
+  --accent: #f4f4f5;
+  /* transform to text DONE */
+  --accent-text: #111827;
+  --invert: #ffffff;
+
+  --destructive: #ef4444;
+  /* transform to text DONE */
+  --destructive-text: #ffffff;
+  --destructive-hover: #dc2626;
+  /* check spelling DONE */
+  --destructive-active: #b91c1c;
+
+  --theme-primary: #b732f5;
+  /* transform to text DONE */
+  --theme-primary-text: #fff;
+  --theme-primary-hover: #c55bf7;
+  /* transform to outline hover DONE */
+  --theme-primary-outline-hover: #f9ebff;
+  --theme-primary-focus: #9228c4;
+  --theme-primary-active: #9228c4;
+
+  /* delete, use --destructive DONE */
+  /* --destructive-secondary: #ef4444; */
+  /* delete, use --destructive-hover DONE */
+  /* --destructive-secondary-hover: #dc2626; */
+
+  --border: #e5e5e5;
+  /* delete, find right color DONE */
+  /* --border-hover: #d4d4d4; */
+  --input: #e5e7eb;
+  --ring: #0a0a0a;
+  --radius: 0.5rem;
+
+  /* delete, find right color DONE */
+  /* --tagline-primary: #fefce8; */
+}
+
+.dark {
+  --background: #030712;
+  --foreground: #000000;
+
+  --primary: #fafafa;
+  --primary-text: #0a0a0a;
+
+  --secondary: #1f2937;
+  --secondary-text: #f9fafb;
+
+  --muted: #1f2937;
+  --muted-text: #9ca3af;
+
+  --accent: #1f2937;
+  --accent-text: #f9fafb;
+
+  --destructive: #7f1d1d;
+  --destructive-text: #f9fafb;
+
+  --border: #1f2937;
+  --input: #1f2937;
+  --ring: #d1d5db;
+}
+
+.PopoverContent {
+  width: var(--radix-popover-trigger-width);
+  max-height: var(--radix-popover-content-available-height);
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+.hide-password-toggle::-ms-reveal,
+.hide-password-toggle::-ms-clear {
+  visibility: hidden;
+  pointer-events: none;
+  display: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
