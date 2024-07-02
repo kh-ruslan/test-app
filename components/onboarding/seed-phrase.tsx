@@ -50,7 +50,7 @@ const SeedPhrase = ({ setStep }: SeedPhraseProps) => {
 
       <div className="border rounded-lg p-4 pr-2 w-[calc(100%+18px)] self-center">
         <span className="flex items-center justify-end gap-2 mb-2.5 mr-2">
-          Copy to clipboard <CopyButton value="SEED_PHRASE" />
+          Copy to clipboard <CopyButton value={SEED_PHRASE} />
         </span>
 
         {showPhrase ? (
