@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@shibaone/shibhubui": "^3.33.0",
+    "@shibaone/shibhubui": "^4.4.0",
     "react": "^18",
     "react-dom": "^18",
     "next": "14.2.4",
