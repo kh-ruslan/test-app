@@ -79,14 +79,14 @@ const EnterPassword = ({ setStep }: EnterPasswordProps) => {
           <p className="flex justify-center items-baseline gap-3 text-sm font-medium">
             <span
               className="cursor-pointer"
-              onClick={() => setStep('enter-code')}
+              onClick={() => setStep('reset-by-google-auth')}
             >
               Google Authenticator
             </span>
             <span className="text-xs text-muted-text">or</span>
             <span
               className="cursor-pointer"
-              onClick={() => setStep('enter-seed-phrase')}
+              onClick={() => setStep('reset-by-seed-phrase')}
             >
               24 word seed phrase
             </span>

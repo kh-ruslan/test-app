@@ -30,7 +30,7 @@ const formSchema = z
   })
   .refine((data) => data.password === data.confirmPassword, {
     path: ['confirmPassword'],
-    message: 'Passwords does not match',
+    message: 'Password does not match',
   });
 
 interface SecureAccountProps {

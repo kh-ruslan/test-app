@@ -1,4 +1,5 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { ArrowLeft } from 'lucide-react';
 import {
   DialogHeader,
   DialogDescription,
@@ -6,14 +7,16 @@ import {
   Button,
   DialogTitle,
 } from '@shibaone/shibhubui';
-import { ArrowLeft } from 'lucide-react';
 import CountdownTimer from '../countdown-timer';
+import LoginContext from '../context';
 
 interface VerifyEmailProps {
   setStep: (step: string) => void;
 }
 
 const VerifyEmail = ({ setStep }: VerifyEmailProps) => {
+  const { userEmail } = useContext(LoginContext);
+
   // Only for test, remove when login flow is ready
   useEffect(() => {
     setTimeout(() => setStep('enter-password'), 5000);
@@ -32,7 +35,9 @@ const VerifyEmail = ({ setStep }: VerifyEmailProps) => {
           <DialogTitle>Verify your email</DialogTitle>
         </div>
         <DialogDescription>
-          We&#39;ve emailed a login link to email@example.com.
+          <span className="break-all">
+            We&#39;ve emailed a login link to {userEmail}.
+          </span>
           <br />
           Check your spam folder.
         </DialogDescription>

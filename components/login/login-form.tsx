@@ -1,7 +1,9 @@
+import { useContext } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import LoginFooter from './login-footer';
+import LoginContext from '../context';
 import {
   Separator,
   Form,
@@ -27,6 +29,8 @@ const formSchema = z.object({
 });
 
 const LoginForm = ({ setStep }: LoginFormProps) => {
+  const { setUserEmail } = useContext(LoginContext);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -36,6 +40,7 @@ const LoginForm = ({ setStep }: LoginFormProps) => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values);
+    setUserEmail(values.email);
     setStep('verify-email');
   };
 
