@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import {
   CopyButton,
@@ -44,46 +42,41 @@ const AuthApp = ({ setStep }: AuthAppProps) => {
       <ol className="text-sm text-muted-text list-decimal -mt-2">
         <li className="ml-4">
           Download the{' '}
-          <Link
+          <a
             className="text-theme-primary"
             target="_blank"
             rel="nofollow noopener"
             href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"
           >
             Google Authenticator app
-          </Link>{' '}
+          </a>{' '}
           <span className="hidden sm:inline">
             on your smartphone on all screens.
           </span>
         </li>
 
         <div className="flex sm:hidden my-2.5">
-          <Link
+          <a
             target="_blank"
             rel="nofollow noopener"
             href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2"
           >
-            <Image
+            <img
               src="/google-play.png"
               width={166}
               height={48}
               alt="google play"
               className="mr-5"
             />
-          </Link>
+          </a>
 
-          <Link
+          <a
             target="_blank"
             rel="nofollow noopener"
             href="https://apps.apple.com/us/app/google-authenticator/id388497605"
           >
-            <Image
-              src="/app-store.png"
-              width={166}
-              height={48}
-              alt="app store"
-            />
-          </Link>
+            <img src="/app-store.png" width={166} height={48} alt="app store" />
+          </a>
         </div>
 
         <li className="ml-4">
@@ -92,14 +85,14 @@ const AuthApp = ({ setStep }: AuthAppProps) => {
         </li>
 
         <div className="flex flex-col items-center mt-3 sm:mt-10 gap-2">
-          <Image
+          <img
             src="/google-auth.png"
             width={160}
             height={160}
             alt="auth-qr-code"
             className="sm:hidden"
           />
-          <Image
+          <img
             src="/google-auth.png"
             width={240}
             height={240}
