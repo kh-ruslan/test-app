@@ -58,9 +58,12 @@ const LoginForm = ({ setStep }: LoginFormProps) => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Enter email</FormLabel>
                 <FormControl>
-                  <InputField placeholder="name@gmail.com" {...field} />
+                  <InputField
+                    placeholder="name@gmail.com"
+                    label="Enter email"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage className="min-h-min" />
               </FormItem>
